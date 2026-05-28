@@ -1,0 +1,78 @@
+<div class="container">
+
+  <h2>Procesar Estudiante</h2>
+
+  <label>Ingrese nombre</label>
+
+  <input
+    type="text"
+    [(ngModel)]="nombre">
+
+  <br><br>
+
+  <label>Ingrese nota 1</label>
+
+  <input
+    type="number"
+    [(ngModel)]="nota1">
+
+  <br><br>
+
+  <label>Ingrese nota 2</label>
+
+  <input
+    type="number"
+    [(ngModel)]="nota2">
+
+  <br><br>
+
+  <label>Ingrese nota 3</label>
+
+  <input
+    type="number"
+    [(ngModel)]="nota3">
+
+  <br><br>
+
+  <button (click)="procesarEstudiante()">
+    Procesar
+  </button>
+
+  <button (click)="limpiarFormulario()">
+    Limpiar
+  </button>
+
+  <hr>
+
+  <div *ngIf="resultado" class="resultado">
+
+    <h3>Resultado</h3>
+
+    <p>
+      <b>Nombre:</b>
+      {{ resultado.nombre }}
+    </p>
+
+    <p>
+      <b>Suma:</b>
+      {{ resultado.suma }}
+    </p>
+
+    <p>
+      <b>Promedio:</b>
+      {{ resultado.promedio }}
+    </p>
+
+    <p>
+      <b>Estado:</b>
+      {{ resultado.estado }}
+    </p>
+
+    <p>
+      <b>Observación:</b>
+      {{ resultado.observacion }}
+    </p>
+
+  </div>
+
+</div>

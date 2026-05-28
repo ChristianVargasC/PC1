@@ -1,0 +1,100 @@
+<div class="container">
+
+  <h2>Calculadora IMC</h2>
+
+  <label>Ingrese nombre</label>
+
+  <input
+    type="text"
+    [(ngModel)]="nombre">
+
+  <small class="error">
+    {{ errores.nombre }}
+  </small>
+
+  <br><br>
+
+  <label>Ingrese correo</label>
+
+  <input
+    type="email"
+    [(ngModel)]="correo">
+
+  <small class="error">
+    {{ errores.correo }}
+  </small>
+
+  <br><br>
+
+  <label>Ingrese peso (kg)</label>
+
+  <input
+    type="number"
+    [(ngModel)]="peso">
+
+  <small class="error">
+    {{ errores.peso }}
+  </small>
+
+  <br><br>
+
+  <label>Ingrese altura (m)</label>
+
+  <input
+    type="number"
+    step="0.01"
+    [(ngModel)]="altura">
+
+  <small class="error">
+    {{ errores.altura }}
+  </small>
+
+  <br><br>
+
+  <button (click)="procesarFormulario()">
+    Procesar
+  </button>
+
+  <button (click)="limpiarFormulario()">
+    Limpiar
+  </button>
+
+  <hr>
+
+  <div *ngIf="resultado" class="resultado">
+
+    <h3>Resultado</h3>
+
+    <p>
+      <b>Nombre:</b>
+      {{ resultado.nombre }}
+    </p>
+
+    <p>
+      <b>Correo:</b>
+      {{ resultado.correo }}
+    </p>
+
+    <p>
+      <b>Peso:</b>
+      {{ resultado.peso }} kg
+    </p>
+
+    <p>
+      <b>Altura:</b>
+      {{ resultado.altura }} m
+    </p>
+
+    <p>
+      <b>IMC:</b>
+      {{ resultado.imc }}
+    </p>
+
+    <p>
+      <b>Categoría:</b>
+      {{ resultado.categoria }}
+    </p>
+
+  </div>
+
+</div>
